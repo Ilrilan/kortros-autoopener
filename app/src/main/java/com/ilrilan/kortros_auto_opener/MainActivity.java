@@ -61,6 +61,11 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        try {
+            boolean switchState = AssistantSwitchState.getAsistantSwitchState();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return super.onOptionsItemSelected(item);
     }
 
